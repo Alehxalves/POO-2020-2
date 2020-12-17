@@ -59,17 +59,17 @@ public class carro {
         while(true){
             String line = scanner.nextLine();
             String[] ui = line.split(" ");
-            if(line.equals("$in")){
+            if(line.equals("in")){
                 porshe.embarcar();
-            }else if(line.equals("$out")){
+            }else if(line.equals("out")){
                 porshe.desembarcar();
-            }else if(line.equals("$show")){
+            }else if(line.equals("show")){
                 System.out.println(porshe);
-            }else if(ui[0].equals("$fuel")){
+            }else if(ui[0].equals("fuel")){
                 porshe.abastecer(Integer.parseInt(ui[1]));
-            }else if(ui[0].equals("$drive")){
+            }else if(ui[0].equals("drive")){
                 porshe.dirigir(Integer.parseInt(ui[1]));
-            }else if(line.equals("$end")){
+            }else if(line.equals("end")){
                 break;
             }else
                 System.out.println("Comando inválido");
