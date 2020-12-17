@@ -116,6 +116,7 @@ public class LapiseiraInterativa{
             }
         }
         scanner.close();
+        
     }
 }
 
