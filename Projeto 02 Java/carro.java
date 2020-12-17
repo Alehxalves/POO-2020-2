@@ -75,5 +75,6 @@ public class carro {
                 System.out.println("Comando inválido");
         }
         scanner.close();
+        
     }
 }
