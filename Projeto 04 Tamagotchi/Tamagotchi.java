@@ -32,42 +32,42 @@ class Pet{
     }
 
     private void setEnergy(int value){
-        if(this.energy > 0){
-            this.energy = energy + value;
-            if(this.energy > energyMax){
-                System.out.println("Seu pet está totalmente descansado");
-                energy = energyMax;
-                return;
-            }
-            if(energy <= 0)
-                this.alive = false;
-                System.out.println("Seu pet morreu de cansaço.");
+        this.energy = energy + value;
+        if(this.energy > energyMax){
+            System.out.println("Seu pet está totalmente descansado");
+            this.energy = energyMax;
+            return;
+        }
+        if(energy <= 0){
+            this.energy = 0;
+            System.out.println("Seu pet morreu de cansaço.");
+            this.isAlive();
         }
     }
     private void setHungry(int value){
-        if(this.isAlive() && this.hungry > 0){
-            this.hungry = hungry + value;
-            if(hungry > hungryMax){
-                System.out.println("O pet está de barriga cheia");
-                hungry = hungryMax;
-                return;
-            }
-            if(hungry <= 0)
-                this.alive = false;
-                System.out.println("Seu pet morreu de fome.");
+        this.hungry = hungry + value;
+        if(this.hungry > hungryMax){
+            System.out.println("O pet está de barriga cheia");
+            this.hungry = hungryMax;
+            return;
+        }
+        if(hungry <= 0){
+            this.hungry = 0;
+            System.out.println("Seu pet morreu de fome.");
+            this.isAlive();
         }
     }
     private void setClean(int value){
-        if(this.isAlive() && this.clean > 0){
-            this.clean = clean + value;
-            if(clean > cleanMax){
-                System.out.println("O pet ta todo limpinho.");
-                clean = cleanMax;
-                return;
-            }
-            if(clean <= 0)
-                this.alive = false;
-                System.out.println("Seu pet morreu de sujeira.");
+        this.clean = clean + value;
+        if(clean > cleanMax){
+            System.out.println("O pet ta todo limpinho.");
+            this.clean = cleanMax;
+            return;
+        }
+        if(clean <= 0){
+            this.clean = 0;
+            System.out.println("Seu pet morreu de sujeira.");
+            this.isAlive();
         }
     }
 
@@ -107,7 +107,7 @@ class Pet{
         setEnergy(-3);
         setHungry(-1);
         setClean(cleanMax);
-        age +=2;
+        age ++;
     }
     public void sleep(){
         if(!this.isAlive()){
