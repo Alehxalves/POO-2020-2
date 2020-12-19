@@ -1,4 +1,5 @@
-Projeto 03 Lapiseira Interativa
+Aluno: Alex Alves Matrícula: 496022
+
 
 O que fez: Fiz o projeto da lapiseira interativa.
 
@@ -8,4 +9,4 @@ Como fez: Construi primeiro as classes juntos com seus metodos e construtos como
 
 Dificuldade/O que aprendeu: Tive dificuldade em trabalhar com as class e com a agregação entre ela, e mais dificuldade em entender como seriam os métodos e como eles funcionavam, principalmente o métode de escreverFolhas, aprendi a trabalhar melhor com mais de uma classe.
 
-Tempo gasto: certa de 1 hora e 50 min.
+Tempo gasto: certa de 1 hora.
