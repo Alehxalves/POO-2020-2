@@ -1,1 +1,1 @@
-# Meus projetos para disciplina de POO-2020.2.
+# Meus projetos da disciplina de POO-2020.2.
