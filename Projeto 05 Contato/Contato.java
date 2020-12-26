@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 
 class Fone{
-    private String label;
-    private String number;
+    String label;
+    String number;
 
     public Fone(String label, String number){
         this.label = label;
@@ -14,11 +14,10 @@ class Fone{
         return  label + ":" + number;
     }
 
-    public static boolean validate(String number){
+    public static boolean isValid(String number){
         String str = ".()0123456789";
         for(int i = 0; i < number.length(); i++){
-            char c = number.charAt(i);
-            if(str.indexOf(c, 0) == -1){
+            if(str.indexOf(number.charAt(i)) == -1){
                 return false;
             }
         }
@@ -46,7 +45,7 @@ public class Contato{
     }
 
     public void addFone(String label, String number){
-        if(!Fone.validate(number)){
+        if(!Fone.isValid(number)){
             System.out.println("Número inválido");
             return;
         }
@@ -62,11 +61,21 @@ public class Contato{
     public void setName(String name){
         this.name = name;
     }
+    public void rm(String label){
+        for(int i = 0; i < fones.size(); i++){
+            if(fones.get(i).label.equals(label)){
+                fones.remove(i);
+                return;
+            }
+        }
+        System.out.println("Label inválido");
+        
+    }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Contato contato = new Contato("");
-
+        System.out.println("Comandos\n [add] (label, number) | [show] (gets) | [rmv] (index)\n [rm] (label) | [end] (encerrar) | [name] (nome)\n");
         while(true){
             String line = scanner.nextLine();
             String[] ui = line.split(" ");
@@ -80,6 +89,8 @@ public class Contato{
                 contato.addFone(ui[1], ui[2]);
             }else if(ui[0].equals("rmv")){
                 contato.rmFone(Integer.parseInt(ui[1]));
+            }else if(ui[0].equals("rm")){
+                contato.rm(ui[1]);
             }else{
                 System.out.println("Comando Inválido");
             }
