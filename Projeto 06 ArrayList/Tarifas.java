@@ -53,6 +53,8 @@ class ContaBancaria{
     }
     public void extornar(String value){
         String[] line = value.split(" ");
+        if(line.length < 1)
+            return;
         for(int i = 1; i < line.length; i++){
             if(Integer.parseInt(line[i]) <= 0){
                 System.out.println("Indice " + Integer.parseInt(line[i]) + " inválido");
