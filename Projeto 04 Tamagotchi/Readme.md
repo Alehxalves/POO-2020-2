@@ -1,5 +1,3 @@
-Aluno: Alex Alves
-Matrícula: 496022
 
 O que fiz - Projeto Tamagotchi interativo.
 
