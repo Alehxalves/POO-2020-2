@@ -1,5 +1,3 @@
-Aluno: Alex Alves Matrícula: 496022
-
 
 O que fez: Fiz o projeto da lapiseira interativa.
 
