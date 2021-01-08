@@ -1,1 +1,1 @@
-# Meus projetos da disciplina de POO-2020.2.
+# Projetos referentes a disciplina de POO-2020.2 do curso de Sistemas de Informação.
