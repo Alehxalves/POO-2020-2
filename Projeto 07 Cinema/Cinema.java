@@ -18,7 +18,7 @@ public class Cinema{
             System.out.println("Assento indisponível.");
             return;
         }
-        if(cliente.get(indice).id == null){
+        if(cliente.get(indice).getId() == null){
             cliente.set(indice, new Cliente(id + ":", fone));
         }else
             System.out.println("Este assento já está ocupado.");
@@ -30,7 +30,7 @@ public class Cinema{
             System.out.println("Assento indisponível.");
             return false;
         }
-        if(cliente.get(indice).id != null){
+        if(cliente.get(indice).getId() != null){
             System.out.println("Reserva cancelada.");
             cliente.set(indice, new Cliente(null, null));
             return true;
@@ -42,10 +42,10 @@ public class Cinema{
     public String toString(){  
         String saida = "[ ";
         for(int i = 0; i < cliente.size(); i++){
-            if(this.cliente.get(i).id == null){
+            if(this.cliente.get(i).getId() == null){
                 saida += "- ";
             }else
-                saida += cliente.get(i).id + cliente.get(i).fone + " ";
+                saida += cliente.get(i).getId()+ cliente.get(i).getFone() + " ";
         }
         saida += "]";
         return saida;
