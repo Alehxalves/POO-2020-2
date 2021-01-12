@@ -14,7 +14,7 @@ public class Cinema{
     }
 
     public void reservar(String id, String fone, int indice){
-        if(indice < 0 || indice > cliente.size() - 1){
+        if(indice < 0 || indice >= cliente.size()){
             System.out.println("Assento indisponível.");
             return;
         }
@@ -26,7 +26,7 @@ public class Cinema{
     }
 
     public boolean cancelar(int indice){
-        if(indice < 0 || indice > cliente.size() - 1){
+        if(indice < 0 || indice >= cliente.size()){
             System.out.println("Assento indisponível.");
             return false;
         }
@@ -35,18 +35,26 @@ public class Cinema{
             cliente.set(indice ,null);
             return true;
         }else
-            System.out.println("Assento já está vago, não foi possível cancelar.");
+            System.out.println("Não está na sala.");
             return false;
     }
 
     public String toString(){  
         String saida = "[ ";
+        for(Cliente pessoa : cliente){ // método mais simples explicado em aula.
+            if(pessoa == null){
+                saida += "- ";
+            }else
+                saida += pessoa + " ";
+        }
+        /* 
         for(int i = 0; i < cliente.size(); i++){
             if(this.cliente.get(i) == null){
                 saida += "- ";
             }else
                 saida += cliente.get(i).getId()+ cliente.get(i).getFone() + " ";
         }
+        */
         saida += "]";
         return saida;
     }
