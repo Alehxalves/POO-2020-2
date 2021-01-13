@@ -16,7 +16,7 @@ public class Topic{
     }
 
     public boolean subir(Pass pass){
-        if(pass.getIdade() <= 0 || pass.getIdade() > 150){
+        if(pass.getIdade() < 1 || pass.getIdade() > 116){
             System.out.println("?");
             return false;
         }
