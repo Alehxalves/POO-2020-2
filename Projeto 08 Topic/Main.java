@@ -11,7 +11,7 @@ public class Main {
             String input = scanner.nextLine();
             String[] token = input.split(" ");
 
-            if(input.equals("fechar")){
+            if(input.equals("sair")){
                 break;
             }else if(input.equals("mostrar")){
                 System.out.println(van);

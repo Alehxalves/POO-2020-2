@@ -16,20 +16,20 @@ public class Topic{
     }
 
     public boolean subir(Pass pass){
-        if(pass.getIdade() < 1 || pass.getIdade() > 116){
+        //Apenas um limite de idade.
+        if(pass.getIdade() < 1 || pass.getIdade() > 117){
             System.out.println("?");
             return false;
         }
-        // Verificar se a pessoa já está na topic
+        //Verificar se a pessoa já está na topic
         for(Pass pessoa : cadeiras){
             if(pessoa != null && pessoa.getNome().equals(pass.getNome())){
                 System.out.println(pessoa.getNome() + " já está na topic!");
                 return false;
             }
         }
-        // Pessoa idosa.
-        if(pass.getIdade() >=65){ 
-            // Cadeiras preferenciais
+        //Buscar cadeira preferencial para pessoa idosa.
+        if(pass.getIdade() > 64){ 
             for(int i = 0; i < qtdPref; i++){
                 if(cadeiras.get(i) == null){
                     cadeiras.set(i, pass);
@@ -37,7 +37,8 @@ public class Topic{
                     return true;
                 }
             }
-            //caso não houver cadeiras preferenciais    
+        }else{
+        //Buscar cadeira não preferencial para pessoa jovem/adulta.
             for(int i = qtdPref; i < cadeiras.size(); i++){
                 if(cadeiras.get(i) == null){
                     cadeiras.set(i, pass);
@@ -45,28 +46,18 @@ public class Topic{
                     return true;
                 }
             }
-            System.out.println("A topic está lotada!");
-            return false;
-        }else
-            // Pessoa jovem/adulta.
-            // Cadeiras não preferenciais.
-            for(int i = qtdPref; i < cadeiras.size(); i++){
-                if(cadeiras.get(i) == null){
-                    cadeiras.set(i, pass);
-                    System.out.println(pass.getNome() + " subiu no ônibus.");
-                    return true;
-                }
+        }
+        //VERIFICAR SE HÁ ALGUMA CADEIRA DISPONÍVEL NA TOPIC.
+        for(int i = 0; i < cadeiras.size(); i++){
+            if(cadeiras.get(i) == null){
+                cadeiras.set(i, pass);
+                System.out.println(pass.getNome() + " subiu no ônibus.");
+                return true;
             }
-            // Cadeiras preferenciais.
-            for(int i = 0; i < qtdPref; i++){
-                if(cadeiras.get(i) == null){
-                    cadeiras.set(i, pass);
-                    System.out.println(pass.getNome() + " subiu no ônibus.");
-                    return true;
-                }
-            }
-            System.out.println("A topic está lotada!");
-            return false;
+        }
+        //Se não topic lotada!
+        System.out.println("A topic está lotada!");
+        return false;
     }
 
     public void descer(String nome){
@@ -89,7 +80,7 @@ public class Topic{
                 saida += "@ ";
                 continue;
             }
-            saida += cadeiras.get(i).getNome() + ":" + cadeiras.get(i).getIdade() + " ";
+            saida += "@" + cadeiras.get(i).getNome() + ":" + cadeiras.get(i).getIdade() + " ";
         }
         // Cadeiras normais.
         for(int i = this.qtdPref; i < cadeiras.size(); i++){
@@ -97,7 +88,7 @@ public class Topic{
                 saida += "= ";
                 continue;
             }
-            saida += cadeiras.get(i).getNome() + ":" + cadeiras.get(i).getIdade() + " ";
+            saida += "=" + cadeiras.get(i).getNome() + ":" + cadeiras.get(i).getIdade() + " ";
         }
         saida += "]";
         return saida;
