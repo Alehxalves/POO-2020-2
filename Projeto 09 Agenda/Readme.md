@@ -1,5 +1,5 @@
-- O que fiz: Projeto Agenda.
+- O que fiz: Projeto Favoritos.
 - Com quem fez: Sozinho.
-- Como fez: Era um projeto que utilizava códigos anteriores como contato e fone, então só tive que desenvolver a classe da Agenda, utilizei o indexOf para várias verificações, ordenação utilizando o Compartor que foi aprendido em aula,
-- Dificuldade/ O que aprendi: Foi o projeto mais difícil que já fiz até agora, tive dificuldade para entender o que era requerido para o projeto e principalmente em manipular vários arrays e fazer verificações neles, provavelmente fiz do jeito mais dífícil, mas aprendi como se trabalhar melhor com a ordenação, indexOf e manipulação de vários arrays.
-- Tempo gasto: Mais de 5 horas.
+- Como fez: O projeto só precisava de poucos métodos, já que era uma adição no projeto agenda2, então só adicionei os métodos pedidos e encaixei no código, adicionei algumas coisas a mais, como o atributo de favorito no código do contato, para que ficasse mais fácil de verificar se o mesmo era ou não favorito na agenda..
+- Dificuldade/ O que aprendi: Não tive dificuldade.
+- Tempo gasto: 20 minutos.
