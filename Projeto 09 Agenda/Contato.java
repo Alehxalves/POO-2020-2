@@ -3,11 +3,9 @@ import java.util.ArrayList;
 public class Contato{
     private String name;
     private ArrayList<Fone> fones;
-    private boolean favorito;
 
     public Contato(String name){
         this.name = name;
-        this.favorito = false;
         fones = new ArrayList<>();
 
     }
@@ -46,21 +44,8 @@ public class Contato{
         return fones;
     }
 
-    public boolean isFavorito(){
-        return this.favorito;
-    }
-
-    public void setFavorito(boolean bool){
-        this.favorito = bool;
-    }
-
     public String toString(){
-        String saida = "";
-        if(this.isFavorito()){
-            saida += "@ " + name + " ";
-        }else{
-            saida += "- " + name + " ";
-        }
+        String saida = "- " + name + " ";
         for(int i = 0; i < fones.size(); i++){
             Fone tel = fones.get(i);
             saida += "[" + i + ":" + tel + "]" + " ";

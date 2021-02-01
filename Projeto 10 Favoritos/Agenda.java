@@ -82,8 +82,42 @@ public class Agenda{
         return search; 
     }
 
+    public void brookmark(String name){
+        int index = findContato(name);
+        if(index == -1){
+            System.out.println("Este contato não existe");
+            return;
+        }
+        if(contatos.get(index).isFavorito()){
+            return;
+        }
+        contatos.get(index).setFavorito(true);
+    }
+
+    public void unBrookmark(String name){
+        int index = findContato(name);
+        if(index == -1){
+            System.out.println("Este contato não existe");
+            return;
+        }
+        if(contatos.get(index).isFavorito()){
+            contatos.get(index).setFavorito(false);
+            return;
+        }
+        System.out.println("Este contato não está como favorito");
+    }
+
     public ArrayList<Contato> getContatos(){
         return this.contatos;
+    }
+
+    public ArrayList<Contato> getBrookmarks(){
+        ArrayList<Contato> getBrookmarks = new ArrayList<>();
+        for(Contato contato : contatos){
+            if(contato.isFavorito())
+                getBrookmarks.add(contato);
+        }
+        return getBrookmarks;
     }
 
     public Contato getContato(String name){
@@ -119,6 +153,7 @@ public class Agenda{
         agenda.addContato("rui", new ArrayList<Fone>(Arrays.asList(new Fone("viv:2222"),
         new Fone("oio:9991"))));
         agenda.addContato("zac", new ArrayList<Fone>(Arrays.asList(new Fone("rec:3131"))));
+
         System.out.println(agenda);
         for(Contato contato : agenda.search("va")){
             System.out.println(contato);
@@ -127,6 +162,16 @@ public class Agenda{
         for(Contato contato : agenda.search("999")){
             System.out.println(contato);
         }
+
+        agenda.brookmark("ana");
+        agenda.brookmark("zac");
+        agenda.brookmark("eva");
+
+        for(Contato contato : agenda.getBrookmarks()){
+            System.out.println(contato);
+        }
+        System.out.println("\n");
+        System.out.println(agenda);
     }
 
 }
