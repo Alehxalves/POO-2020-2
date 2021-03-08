@@ -3,11 +3,11 @@ import java.util.ArrayList;
 public class Contato{
     private String name;
     private ArrayList<Fone> fones;
-    private boolean favorito;
+    private boolean starred;
 
     public Contato(String name){
         this.name = name;
-        this.favorito = false;
+        this.starred = false;
         fones = new ArrayList<>();
 
     }
@@ -16,6 +16,12 @@ public class Contato{
         if(!Fone.isValid(number)){
             System.out.println("Número inválido");
             return;
+        }
+        for(Fone fone : this.fones){
+            if(fone.label.equals(label)){
+                fone.number = number;
+                return;
+            }
         }
         fones.add(new Fone(label, number));
     }
@@ -46,17 +52,17 @@ public class Contato{
         return fones;
     }
 
-    public boolean isFavorito(){
-        return this.favorito;
+    public boolean isStarred(){
+        return this.starred;
     }
 
-    public void setFavorito(boolean bool){
-        this.favorito = bool;
+    public void setStarred(boolean bool){
+        this.starred = bool;
     }
 
     public String toString(){
         String saida = "";
-        if(this.isFavorito()){
+        if(this.isStarred()){
             saida += "@ " + name + " ";
         }else{
             saida += "- " + name + " ";

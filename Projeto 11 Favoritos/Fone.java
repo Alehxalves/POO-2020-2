@@ -13,13 +13,6 @@ public class Fone {
         this.number = number;
     }
 
-    public boolean equals(String label){
-        if(this.label.equals(label)){
-            return true;
-        }
-        return false;
-    }
-
     public static boolean isValid(String number){
         String str = ".()0123456789";
         for(int i = 0; i < number.length(); i++){
