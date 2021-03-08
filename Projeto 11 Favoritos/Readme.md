@@ -1,5 +1,5 @@
 - O que fiz: Projeto Favoritos.
 - Com quem fez: Sozinho.
-- Como fez: O projeto só precisava de poucos métodos, já que era uma adição no projeto agenda2, então só adicionei os métodos pedidos e encaixei no código, adicionei algumas coisas a mais, como o atributo de favorito no código do contato, para que ficasse mais fácil de verificar se o mesmo era ou não favorito na agenda..
-- Dificuldade/ O que aprendi: Não tive dificuldade.
-- Tempo gasto: 20 minutos.
+- Como fez: O projeto só precisava de poucos métodos, já que era uma adição no projeto agenda2, então só adicionei os métodos pedidos e TreeMaps..
+- Dificuldade/ O que aprendi: Dificiculdade ainda em utilizar o TreeMap mas devido a aula passada sobre o assunto está mais facil.
+- Tempo gasto: 40 minutos.
