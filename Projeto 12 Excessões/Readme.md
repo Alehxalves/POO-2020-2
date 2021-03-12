@@ -1,0 +1,5 @@
+- O que fiz: Fiz o projeto lapiseira interativa utilizando desta vez as excessões.
+- Com quem fez: Sozinho.
+- Como fez: mudei alguns métodos do projeto, mas o principal foi deletar os prints e substituir pelas execessões, nesse caso eu coloquei a maioria dos error que eram printados como RunTimeException.
+- Dificuldade/ O que aprendi: Tive dificuldade no começo na substuição dos erros printidas, mas como utilizei só uma excessão no final ficou bem simples.
+- Tempo gasto: 30 minutos.
