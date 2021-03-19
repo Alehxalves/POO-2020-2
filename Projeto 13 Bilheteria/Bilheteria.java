@@ -1,20 +1,18 @@
 import java.util.TreeMap;
-import java.util.Map.Entry;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Bilheteria{
     private TreeMap<String, Evento> repEventos;
     private TreeMap<String, Pessoa> repPessoas;
-    private TreeMap<Integer, Venda> repVendas;
+    private ArrayList<Venda> repVendas;
     private double caixa;
-    private int nextInt; // Contador de vendas
 
     public Bilheteria(){
         repEventos = new TreeMap<>();
         repPessoas = new TreeMap<>();
-        repVendas = new TreeMap<>();
+        repVendas = new ArrayList<>();
         caixa = 0;
-        nextInt = 1;
     }
 
     public static void main(String[] args) {
@@ -69,10 +67,8 @@ public class Bilheteria{
         if(repPessoas.get(cliente).getMeia())
             valor -= valor * 0.5;
         repEventos.get(evento).repSetores.get(setor).vender();
-        repVendas.put(nextInt, new Venda(cliente, evento, setor, valor));
+        repVendas.add(new Venda(cliente, evento, setor, valor));
         caixa += valor;
-        nextInt++;
-
     }
 
     public void addPessoa(String nome, int idade, boolean pagaMeia){
@@ -102,8 +98,8 @@ public class Bilheteria{
     public String showVendas(){
         StringBuilder saida = new StringBuilder();
         saida.append("- Vendas - " + "\n");
-        for(Entry<Integer, Venda> pair: repVendas.entrySet())
-            saida.append("[" + pair.getKey() + "] " + pair.getValue() + "\n");
+        for(Venda venda : repVendas)
+            saida.append("[" + venda.toString() + "] "+ "\n");
         saida.append("Caixa: R$ " + caixa);
         return saida.toString();
     }
@@ -111,7 +107,7 @@ public class Bilheteria{
     public String showPessoa(){
         StringBuilder saida = new StringBuilder();
         saida.append("- Pessoas - " + "\n");
-        for(Pessoa pessoa: repPessoas.values())
+        for(Pessoa pessoa : repPessoas.values())
             saida.append(pessoa.toString() + "\n");
         return saida.toString();
     }
@@ -119,7 +115,7 @@ public class Bilheteria{
     public String showEvento(){
         StringBuilder saida = new StringBuilder();
         saida.append("- Eventos - " + "\n");
-        for(Evento evento: repEventos.values())
+        for(Evento evento : repEventos.values())
             saida.append(evento.toString() + "\n");
         return saida.toString();
     }

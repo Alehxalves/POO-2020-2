@@ -11,6 +11,10 @@ public class Venda {
         this.valor = preco;
     }
 
+    public String getCliente(){
+        return this.cliente;
+    }
+
     public String toString(){
         StringBuilder saida = new StringBuilder();
         saida.append(cliente + " : " + evento + " : " + setor + " : R$" + valor);
