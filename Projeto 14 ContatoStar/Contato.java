@@ -43,9 +43,10 @@ public class Contato{
     }
     public String toString(){
         StringBuilder saida = new StringBuilder();
-        saida.append(name + " [");
-        for(int i = 0; i < fones.size(); i++)
-            saida.append(i + ":" + fones.get(i).toString());
+        saida.append(name + " [ ");
+        for(int i = 0; i < this.fones.size(); i++){
+            saida.append(i + ":" + this.fones.get(i).toString() + " ");
+        }
         saida.append("]");
         return saida.toString();
     }

@@ -9,13 +9,14 @@ public class AgendaPlus extends Agenda implements BrookmarkIF{
     public static void main(String[] args){
         AgendaPlus agenda = new AgendaPlus();
         Scanner scanner = new Scanner(System.in);
+
         while(true){
             String line = scanner.nextLine();
             String[] ui = line.split(" ");
             try{
                 if(ui[0].equals("end")){
                     break;
-                }else if(ui[0].equals("addContact")){ // inserir oo numeros assim: label:number,
+                }else if(ui[0].equals("addContact")){ // inserir os numeros de contato desta maneira, label:number,
                     ArrayList<Fone> fones = new ArrayList<>();
                     for(int i = 2; i < ui.length; i++){
                         fones.add(new Fone(ui[i]));
@@ -58,13 +59,9 @@ public class AgendaPlus extends Agenda implements BrookmarkIF{
     public void brookmark(String name){
         if(this.getContact(name) == null)
             throw new RuntimeException("fail: contato nao existe");
-        if(this.getContact(name) instanceof ContatoPlus){
-            ContatoPlus contato = (ContatoPlus)getContact(name);
-            contato.setBrookmark(true);
-            if(brookmarks.containsKey(name))
-                return;
-            brookmarks.put(name, contato);
-        }
+        ContatoPlus contato = (ContatoPlus)getContact(name);
+        contato.setBrookmark(true);
+        brookmarks.put(name, contato);
     }
     @Override
     public void unBrookmark(String name) {
