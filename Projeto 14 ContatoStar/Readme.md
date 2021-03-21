@@ -1,0 +1,5 @@
+- O que fiz: Projeto AgendaStar.
+- Com quem fez: Sozinho.
+- Como fez: A estrutura desse projeto já estava quase completa faltando 2 class que foram as mais difíceis já que cada uma herdava de uma classe diferente, tive que rever a aula de herança pra conseguir entender as camadas e onde mexer para poder fazer tudo funcionar, depois de muita tentativa e erro fui entendo e vendo onde mexer para tudo funcionar.
+- Dificuldade/ O que aprendi: Tive muita dificuldade em entender como as classes se relacionavam e o que eu tinha que implementer ou sobescrever nas class que eram filho, fiquei muito tempo pensando no problema, e aprendi a entender um pouco mais como funcionava a herança, mas ainda precisa treinar muito isso pra ser algo mais natural.
+- Tempo gasto: 7 horas.
