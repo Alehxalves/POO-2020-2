@@ -59,6 +59,8 @@ public class AgendaPlus extends Agenda implements BrookmarkIF{
     public void brookmark(String name){
         if(this.getContact(name) == null)
             throw new RuntimeException("fail: contato nao existe");
+        if(brookmarks.containsKey(name))
+            throw new RuntimeException("fail: contato ja esta na brookmark");
         ContatoPlus contato = (ContatoPlus)getContact(name);
         contato.setBrookmark(true);
         brookmarks.put(name, contato);
