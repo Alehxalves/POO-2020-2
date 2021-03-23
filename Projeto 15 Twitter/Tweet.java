@@ -19,15 +19,6 @@ public class Tweet {
                 return;
         likes.add(username);
     }
-    public int getIdTw(){
-        return idTw;
-    }
-    public String getUsername(){
-        return username;
-    }
-    public String getMsg(){
-        return msg;
-    }
     public String toString(){
         Iterator<String> iterator = likes.iterator();
         StringBuilder saida = new StringBuilder();
