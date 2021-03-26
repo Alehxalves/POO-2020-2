@@ -78,19 +78,19 @@ public class WhatsappService{
         }
         rep_chat.put(chatId, new Chat(chatId, user));
     }
-    public void addByInvite(String inviteId, String gestId, String chatId){
+    public void addByInvite(String inviteId, String guestId, String chatId){
         User invate = getUser(inviteId);
-        User gest = getUser(gestId);
+        User guest = getUser(guestId);
         Chat chat = getChat(chatId);
-        chat.addByInvite(invate, gest);
+        chat.addByInvite(invate, guest);
+        System.out.println(guestId + " juntou-se ao chat " + chatId);
     }
     public String allUsers(){
         StringBuilder saida = new StringBuilder();
         saida.append("[");
         for(String userId : rep_user.keySet())
             saida.append(userId + " ");
-        if(saida.lastIndexOf(" ") != -1)
-            saida.deleteCharAt(saida.lastIndexOf(" "));
+        if(saida.lastIndexOf(" ") != -1)saida.deleteCharAt(saida.lastIndexOf(" "));
         saida.append("]");
         return saida.toString();
     }
@@ -98,6 +98,9 @@ public class WhatsappService{
         User user = getUser(userId);
         Chat chat = getChat(chatId);
         chat.rmUserChat(user);
+        if(chat.getUsers().size() == 0) // Se todos users sairem do chat ele é deletado automaticamente
+            rep_chat.remove(chatId);
+        System.out.println(userId + " deixou o chat " + chatId);
     }
     public void sendMessage(String userId, String chatId, String message){
         User user = getUser(userId);
@@ -119,7 +122,7 @@ public class WhatsappService{
                 saida.append(msgs.get(i).toString());
                 saida.append("]" + "\n");
             }
-            if(saida.lastIndexOf("\n") != -1)saida.deleteCharAt(saida.lastIndexOf("\n"));
+            saida.deleteCharAt(saida.lastIndexOf("\n"));
             user.rmNotifications(chatId);
         }else
             saida.append("[EMPTY]");

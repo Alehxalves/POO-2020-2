@@ -57,7 +57,7 @@ public class Chat {
     }
     public void addByInvite(User invite, User gest){
         if(!hasUser(invite.getId()))
-            throw new RuntimeException("fail: " + invite.getId() + " nao participa do chat " + getId());
+            throw new RuntimeException("fail: " + invite.getId() + " nao conhece o chat " + getId());
         if(hasUser(gest.getId()))
             throw new RuntimeException("fail: " + gest.getId() + " ja esta no chat " + getId());
         addUserChat(gest);

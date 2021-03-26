@@ -27,14 +27,12 @@ public class Main {
                 }else if(ui[0].equals("notify")){
                     System.out.println(whatsapp.getNotifyUser(ui[1]));
                 }else if(ui[0].equals("zap")){
-                    StringBuilder msg = new StringBuilder();
-                    for(int i = 3; i < ui.length; i++){
-                        msg.append(ui[i] + " ");
-                    }
-                    if(msg.lastIndexOf(" ") != -1)msg.deleteCharAt(msg.lastIndexOf(" "));                   
-                    whatsapp.sendMessage(ui[1], ui[2], msg.toString());
+                    String[] token = line.split(ui[2]);
+                    whatsapp.sendMessage(ui[1], ui[2], token[1]);
                 }else if(ui[0].equals("inbox")){
                     System.out.println(whatsapp.readMessageUserChat(ui[1], ui[2]));
+                }else if(ui[0].equals("showUsers")){
+                    System.out.println(whatsapp.allUsers());
                 }else
                     System.out.println("fail: command invalid");
             }catch (RuntimeException e){
