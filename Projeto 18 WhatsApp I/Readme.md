@@ -1,0 +1,5 @@
+- O que fiz: Projeto WhatsApp I.
+- Com quem fez: Sozinho.
+- Como fez: comecei pelas classes, depois os metodos que eu conseguia entender pq só fui entender como faze-los funcionar depois de um tempo pois nao entendia o polimorfismo das classes no primeiro momento, entao alguns métodos que nao soube fazer de cara e conseguir criar o corpo deles quando eu mexendo nas outras classes e vendo como elas se relacionavam.
+- Dificuldade/ O que aprendi: Foi um projeto díficil para mim, porém na parte de construir as classes e escrever os métodos tava okay, minha dificuldade foi no polimorfismo que eu não compreendia muito bem porém fazendo as classes aos poucos fui vendo como funcionava, essa parte foi a minha maior de dificuldade. Neste projeto aprendi que compreender melhor o projeto como um todo e pensar mais no polimorfismo das classes, quando vejo o projeto como muito mais classes como de costume eu fico perdido no começo mas aos poucos estou conseguindo reciocinar melhor e entender o que o projeto pede e como ele funciona.
+- Tempo gasto: 5 horas.
