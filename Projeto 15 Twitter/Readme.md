@@ -1,5 +1,1 @@
-- O que fiz: Projeto Twitter.
-- Com quem fez: Sozinho.
-- Como fez: Fiz com o conteudo aprendido em aula, e observando o diagrama e os requisitos do projeto, tive que pesquisar na internet a manipular melhor o TreeSet mas fora hoje não fiz nada de diferente.
-- Dificuldade/ O que aprendi: Tive dificuldade em entender o diagrama do projeto, pesquisei na internet e vi que era exemplos de navegabilidade e aí ficou mais simples de compreender, ter que trabalhar com tantos mapas também dificultou um pouco, mas a maior dificuldade foi a compreenção do que se pedia no projeto.
-- Tempo gasto: 5 horas e 40min.
+
