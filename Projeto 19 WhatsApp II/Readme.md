@@ -1,5 +1,1 @@
-- O que fiz: Projeto WhatsApp II.
-- Com quem fez: Sozinho.
-- Como fez: Eu ja tinha classes e métodos prontos para este projeto, então só precisei fazer as classes Talk e Group que eram filhas da class Chat, e depois sobescrever alguns métodos, coloquei o método addInviteUser do chat como abstract para desenvolver o corpo no group e o talk, já que o talk não podia invitar pessoas e no group sim, fora esses métódos outra mudança foi no construct da class Chat onde tirei as entradas para criar a classe, já que agora só utilizo o group e o talk, onde os 2 tem entradas diferentes no construct, e por ultimo adicionei um historico no chat onde todo os usuarios daquele chat pode ver todas as mensagens inclusive as que eles mandaram.
-- Dificuldade/ O que aprendi: O projeto ao todo é bem complicado, na implementação do talk e group não tive muitas dificuldades já que o código ja tava praticamente todo feito, só tive que pensar na melhor implementação, não tive muitas dificuldades nessa parte, minha maior dificuldade foi criar o projeto whatsapp I.
-- Tempo gasto: 1 hora e 10 minutos.
+
