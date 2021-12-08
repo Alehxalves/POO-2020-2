@@ -1,5 +1,1 @@
-- O que fiz: Projeto Favoritos.
-- Com quem fez: Sozinho.
-- Como fez: O projeto só precisava de poucos métodos, já que era uma adição no projeto agenda2, então só adicionei os métodos pedidos e TreeMaps..
-- Dificuldade/ O que aprendi: Dificiculdade ainda em utilizar o TreeMap mas devido a aula passada sobre o assunto está mais facil.
-- Tempo gasto: 40 minutos.
+
