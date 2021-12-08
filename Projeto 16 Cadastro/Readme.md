@@ -1,5 +1,1 @@
-- O que fiz: Projeto Cadastro Agencia 2.
-- Com quem fez: Sozinho.
-- Como fez: Comecei com a construção das classes, depois partes para as classes herdadas onde a unica mudança foi no type e no metodo abstrato, depois desenvolvi o corpos das classes que faltavam e fiz a main interativa.
-- Dificuldade/ O que aprendi: tive dificuldade na interação da main não sabia como fazer, mas no final deu tudo certo, não entendi direito o metodo e de adicionar cliente na class da agenda, aprendi um pouco mais sobre o polimorfismo e herança.
-- Tempo gasto: 4 horas e 50min.
+
