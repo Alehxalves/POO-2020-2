@@ -1,5 +1,1 @@
-- O que fiz: Projeto Hospital.
-- Com quem fez: Sozinho, porém utilizei o google para fazer uma das clases e um método toString.
-- Como fez: Como sempre utilizando a descrição do projeto presente no repositório construindo suas classes e por fim relacionando-as, como com o projeto do hospital sem implementar o chat/bate papo, até aí a maior dificuldade foi em saber como alinhar uma string à direita, fiquei um bom tempo pensando e fui atras no google e só achei um forum onde explicava, na implementão do bate papo eu empaquei no código não sabia como implementar aquilo e fiquei muito tempo pra fazer funcionar foi muita tentativa e erro, mas no fim deu certo.
-- Dificuldade/ O que aprendi: foi o projeto mais dificil que eu fiz, o projeto apenas do hospital era okay nao tive muitas dificuldades, a maior dificuldade foi colocar o bate papo pra funcionar, demorei muito muito tempo pra conseguir fazer o bate papo funcionar mas por fim deu certo, devido o tempo e tantas tentativas consegui ter mais noção de polimorfismo e tudo mais.
-- Tempo gasto: 8 horas.
+
